@@ -74,7 +74,7 @@ html, body {
     
 }
 
-/* Left Side Styling */
+
 .content{
     flex: 1;
     display: flex;
@@ -119,7 +119,7 @@ button:hover {
     background-color: #ff6464;
 }
 
-/* Right Side Styling */
+
 .image-side {
     flex: 1;
     background-image: url('img4.jpg'); 
@@ -129,16 +129,28 @@ button:hover {
 
 }
 
-/* Responsive  for mobile */
+
 @media (max-width: 768px) {
     .container {
+        display: flex;
         flex-direction: column;
+        height: auto;
     }
+
+    
+    .content {
+        order: 1;
+        padding: 50px 25px;
+    }
+
+    
     .image-side {
-        height: 50vh;
-    }
-    h1 {
-        font-size: 32px;
+        order: 2;
+        min-height: 280px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        padding-right: 0;
     }
 }
 
@@ -219,13 +231,42 @@ button:hover {
     height: auto;
 }
 
-/* Responsive adjustment */
-@media (max-width: 1024px) {
-    .logo {
-        flex-direction: column;
-        padding: 50px 0;
-    }
-    .layout {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;   
+    padding-left: 0;
+    width: 100%;
+  }
+
+
+  .layout {
+    display: flex;            
+    flex-direction: column;  
+    width: 100%;
+  }
+
+  .layout img {
+    height: 220px;
+  }
+
+  
+  .img2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .text-box {
+    width: 100%;
+    padding: 35px 25px;
+    text-align: left;
+  }
+
+  .text-box h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .text-box span {
+    font-size: 12px;
+  }
 }
